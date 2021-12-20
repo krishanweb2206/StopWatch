@@ -1,0 +1,97 @@
+/* CSS Variables */
+:root{
+    --primary:tomato;
+    --dark:#7d0d05;
+    --darker:#470703;
+    --light:#F3F4F6
+}
+/* Default */
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Fira sans',sans-serif;
+}
+/* Body*/
+body{
+    background: var(--dark);
+    color:var(--light);
+}
+/* Main container*/
+.watch{
+    text-align: center;
+    width:100%;
+    max-width:380px;
+    margin:4rem auto;
+    padding: 1rem 2rem;
+    border-radius:1rem;
+    background: var(--darker);
+}
+/* Timer*/
+.time{
+    font-size:5rem;
+    font-weight:300;
+    margin:1rem;
+}
+/* Controls container  */
+.controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* Buttons */
+.controls button{
+    appearance: none;
+    background: none;
+    border:none;
+    outline:none;
+    user-select: none;
+
+    cursor: pointer;
+    color: var(--light);
+    background-color: var(--primary);
+    font-size:1.1rem;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+
+}
+/* Button hover */
+button:hover{
+    opacity: 0.7;
+}
+/* OnClick button */
+button:active{
+    background-color: var(--dark);
+}
+
+/* Media Query */
+/* For Screen Width */
+@media only screen and (max-width: 365px) {
+    
+    body{
+        background-color: yellow;
+    }
+    .watch{
+        margin: 0;
+        padding: 0;
+        min-width: 100% !important;
+        background: var(--darker);
+    }
+    .time{
+        font-size: 250;
+    }
+}
+/* For Screen Height */
+@media screen and (max-height:315px) {
+
+    .watch{
+        margin: 0;
+        padding: 1rem 2rem;
+        min-width: 100% !important;
+        background: var(--darker);
+    }
+    .time{
+        font-size: 250;
+    }
+}
